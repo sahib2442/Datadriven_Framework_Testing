@@ -11,7 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DataDriven_Framework {
 	
-	@Test(dataProvider="wordpressData")
+	@Test(dataProvider="facebook")
     public void login(String username,String password) throws InterruptedException {
         
         WebDriverManager.edgedriver().setup();
@@ -31,7 +31,7 @@ public class DataDriven_Framework {
         
     }
     
-    @DataProvider(name="wordpressData")
+    @DataProvider(name="facebook")
     public Object[][] passData() {
         
         ExcelDataConfig config=new ExcelDataConfig("C:\\Users\\kader\\eclipse-workspace\\Datadriven_Framework_Testing\\Test Data\\Login.xlsx");
